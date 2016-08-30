@@ -17,7 +17,10 @@ public class Helloworld {
         run();
         outClose();
     }
-
+    void testAdd()
+    {
+        assert 1+1 == 2; 
+    }
     void run()
     {
         println("Hello!");
