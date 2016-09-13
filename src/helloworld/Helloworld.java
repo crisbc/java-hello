@@ -25,7 +25,43 @@ public class Helloworld {
         //println("How are you?");      
     }
   
-    
+    void testBooleans()
+    {
+        assert true != false;
+        assert true == true;
+        try(Close out = outExpect("true")) {println(true); }
+        try(Close out =outExpect("false")) {println(false);}
+        
+        //not
+        assert !true == false;
+        assert !false ==true;
+        
+        //and
+        assert (true && true == true);
+        assert(true && false == false);
+        assert(false && true == false);
+        assert(false && false == false);
+        
+        // try of and
+        assert (false && (random(0,1) ==1))==false;
+        assert (false && (random(0,1) ==1))==false;
+        assert (false && (random(0,1) ==1))==false;
+        
+        assert(false && (1/0 ==3))==false;
+        
+        //or
+        assert(true||true)==true;
+        assert(true||false)==true;
+        assert(false||true)==true;
+        assert(false||false)==false;
+        
+        assert(false && (random (0,1)==1)) ==false;
+        assert(false && (random (0,1)==1)) ==false;
+        assert(false && (random (0,1)==1)) ==false;
+        
+        assert(true || ((1/0)==3))==true;
+        
+    }
     void sideEffect(int y)
     {
         println(y);
@@ -34,6 +70,7 @@ public class Helloworld {
     {
         assert Integer.MAX_VALUE == Math.pow(2,31)-1;
         println(Integer.MAX_VALUE);
+        
        // assert Integer.MAX_VALUE == 0b1000_0000_0000_0000_0000_0000_0000_0000;
         
         int x =3;
@@ -108,6 +145,7 @@ public class Helloworld {
      println(Integer.toString(-2, 2));
      
     }
+    //conversions
     void testConvert()
     {
         
@@ -119,4 +157,6 @@ public class Helloworld {
                                (int) (byte) 0b1111_1111;
         
     }
+    
+    void test
 }
