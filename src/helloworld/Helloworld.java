@@ -158,5 +158,71 @@ public class Helloworld {
         
     }
     
-    void test
+    void testLoop()
+    {
+        try(Close out =outExpect(0,EOL,1,EOL,2,EOL,3,EOL)){
+        int n =4;
+        int i =0;
+        while (i<n) 
+            {
+                println(i);
+                ++i;
+             }
+        }
+         try(Close out =outExpect(0,EOL,1,EOL,2,EOL,3,EOL)){
+        int n =4;
+        int i =0;
+        while (i<n) 
+            {
+                println(i);
+                if (i == 2) { ++i; continue;}
+                println(i);
+                ++i;
+             }
+        }
+        
+        try(Close out =outExpect(0,EOL,1,EOL,2,EOL,3,EOL)) {
+        int n=4;
+        for(int i = 0; i <n; ++i)
+            {
+                println(i);
+        
+            }
+        }
+    }
+     try(Close out =outExpect(0,EOL,1,EOL,2,EOL,3,EOL)) {
+        int n=4;
+        for(int i = 0; i <n; ++i)
+            {
+                if (i==2) break;
+                println(i);
+        
+            }
+        
+ 
+        }
+     String [] words = new String[] { "this","that","other"};
+     assert words[0].equals("this");
+     assert words[1].equals("that");
+     assert words[2].equals("other");
+     assert.words.length ==3;
+     
+     String [] nouns = new String[3];
+     assert nouns[0] == null;
+     assert nouns[1]== null;
+     assert nouns.length ==2;
+     
+     try(Close out =outExpect("this",EOL, "that",EOL,"other",EOL))
+     for (int i=0; i<words.length; ++i)
+     {
+         println(words(i));
+     }
+     try(Close out =outExpect("this",EOL, "that",EOL,"other",EOL))
+     for (string word: words)
+     {
+         println(words(i));
+     }
+     
+     
 }
+
