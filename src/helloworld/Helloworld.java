@@ -279,6 +279,10 @@ public class Helloworld {
          
          
      }
+     
+     void testClock(){
+         Clock clock =  untest(new Clock());
+     }
 
 }
 
